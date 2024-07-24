@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dars_82/utils/constans/product_graph_query.dart';
 import 'package:dars_82/utils/constans/product_mutations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -271,7 +272,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   if (result.isLoading) {
                     return const Center(
-                      child: CircularProgressIndicator(),
+                      child: SpinKitCircle(
+                        color: Colors.black,
+                      ),
                     );
                   }
 
